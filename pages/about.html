@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/ce50b37cb7.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="../styles/app.css">
+    <link href="../styles/carousel.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/background.css">
+    <style>
+
+
+      .titlos{
+        @media (min-width: 768px) {
+          font-size: 18px;
+        }
+        }
+         
+    </style>
+
+    <title>About the project</title>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../index.html"><i class="fas fa-file-medical-alt"></i> Heart Disease<span class="sr-only">(current)</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="form.html">Form</a>
+            <a class="nav-item nav-link active" href="#">About</a>
+          </div>
+        </div>
+      </nav>
+  
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide img-fluid" src="../images/data3.jpg" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-left ">
+                <h1 class="titlos">Our Dataset.</h1>
+                <p>The purpose of our site is to predict if a person has heart disease.
+                   To do so we used a dataset which contains 13 attributes (age,sex,resting blood pressure,chest,
+                   serum cholestoral,fasting blood sugar,resting electrocardiographic results,
+                   maximum heart rate achieved,exercise induced angina,oldpeak,slope,number of major vessels,thal).
+                   The data was collected from 269 samples. We then processed our data on Weka , trying different 
+                   filters and classifiers to get the best possible results.</p>
+                <p><a class="btn btn-lg btn-primary" href="http://tunedit.org/repo/UCI/heart-statlog.arff" role="button">Go to dataset</a></p>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+      </div>
+
+
+
+
+      <div class="container marketing">
+        <h1 class="display-3 mb-5 mt-5">How we made the website</h1>
+        <hr class="featurette-divider">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row mb-5">
+          <div class="col-lg-6">
+            <img class="rounded-circle mb-2" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Generic placeholder image" width="140" height="140">
+            <h2>Bootstrap</h2>
+            <p>We used bootsrap4 + html + a little css + js (for form validation) to make the website.</p>
+            <p><a class="btn btn-secondary" href="https://getbootstrap.com/" target="_blank" role="button">Bootstrap page &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-6">
+            <img class="rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="Generic placeholder image" width="140" height="140">
+            <h2>PHP</h2>
+            <p>We used PHP to make the if statements that decide the absence or presence of heart disease.</p>
+            <p><a class="btn btn-secondary" href="https://www.php.net/" target="_blank" role="button">PHP page &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+        <h1 class="display-3 mb-5">How we used weka for classification</h1>
+        <hr class="featurette-divider">
+
+        <div class="row featurette mb-5">
+          <div class="col-md-6">
+            <h2 class="featurette-heading">Preprocess <span class="text-muted">Attribute Selection</span></h2>
+            <p class="lead">We used <strong>attribute selection</strong> to increase the precision of the algorithm for classification. Moreover, precision of J48 algorithm became <strong>0.811</strong>. It was <strong>0.766</strong>. Tp rate was <strong>0.767</strong> and became <strong>0.811</strong>. Attributes that derived from attribute selection are: 1)chest, 2)resting electrocardiographic results, 3)max heart rate, 4)exercise induces angina, 5)oldpeak, 6)number of major vessels, 7)thal. So user must fill in only these 7 attributes in the form. <strong>Click image to download!</strong>
+
+            </p>
+          </div>
+          <div class="col-md-6">
+            <a href="../images/attributesel.png" download>
+              <img class="featurette-image img-fluid mx-auto mt-5" src="../images/attributesel.png" alt="attrsel">
+              </a>
+          </div>
+        </div>
+
+
+        <div class="row featurette mb-5">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Classify <span class="text-muted">J-48 algorithm</span></h2>
+            <p class="lead">We used </strong> J-48</strong> algorithm for classification because it was more precise than all tested algorithms (tp rate, precision). We tested 1)Naive Bayes, IBK, J48, PARTW. <strong>Click image to download!</strong></p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <a href="../images/j48.png" download>
+              <img class="featurette-image img-fluid mx-auto mt-5" src="../images/j48.png" alt="tree">
+            </a>
+          </div>
+        </div>
+
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Cross-validation 10 folds</h2>
+            <p class="lead">We used cross-validation with 10 folds because it is more valid than training and testing. Training and testing had higher percentage of precision but 10 fold cross-validation had high precision and higher percentage of tp-rate than training+testing. <strong>Click the image to download output txt from weka.</strong> </p>
+          </div>
+          <div class="col-md-5">
+            <a href="j48-csf.asc" download>
+              <img class="featurette-image img-fluid mx-auto mt-5" src="../images/cvalid.png" alt="classification">
+            </a>
+          </div>
+        </div>
+
+
+        <!-- /END THE FEATURETTES -->
+        <hr class="featurette-divider">
+
+      </div><!-- /.container -->
+
+
+      <!-- FOOTER -->
+      <footer class="container mt-5">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; Dimitris Misailidis, Christos Kotrotsios &middot; <a>Privacy</a> &middot; <a>Terms</a></p>
+      </footer>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
